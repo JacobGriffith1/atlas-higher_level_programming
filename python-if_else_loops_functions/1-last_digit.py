@@ -11,4 +11,4 @@ if number % i > 5:
 elif number % i == 0:
     print(f"and is 0")
 else:
-    print(f"is less than 6 and not 0")
+    print(f"and is less than 6 and not 0")
