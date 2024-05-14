@@ -13,7 +13,7 @@
 98
 
 >>> add_integer(4, "School")
-b must be an integer
+TypeError: b must be an integer
 
 >>> add_integer(None)
-a must be an integer
+TypeError: a must be an integer
