@@ -22,8 +22,8 @@ def roman_to_int(roman_string):
     last = 0
     numList = [0]
     for ch in roman_string:
-        for romNum in keyList:
-            if romNum == ch:
+        for r in keyList:
+            if r == ch:
                 if romNum.get(ch) <= last:
                     num += subtract(numList)
                     numList = [romNum.get(ch)]
