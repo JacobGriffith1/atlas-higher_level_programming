@@ -16,3 +16,15 @@ Divide by 0:
     Traceback (most recent call last):
     ...
     ZeroDivisionError: division by zero
+
+Divide by string:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], "10")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+Divide by list:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], [10])
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
