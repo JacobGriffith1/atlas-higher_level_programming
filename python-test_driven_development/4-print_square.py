@@ -6,7 +6,7 @@ Module contains function that prints a square of '#'
 
 def print_square(size):
     """Function prints a square of '#'
-    
+
     Args:
         size: size of the square to print
 
