@@ -25,8 +25,8 @@ def text_indentation(text):
     for c in ".?:":
         list = t.split(c)
         t = ""
-        for l in list:
-            l = l.strip(" ")
-            t = l + c if t is "" else t + "\n\n" + l + c
+        for p in list:
+            p = p.strip(" ")
+            t = p + c if t is "" else t + "\n\n" + p + c
 
     print(t[:-3], end=""),
