@@ -1,0 +1,30 @@
+Tests for "3-say_my_name"
+==============================
+
+Using function: say_my_name
+------------------------------
+
+Importing function:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+First/Last is string:
+    >>> say_my_name("Peter", "Pan")
+    My name is Peter Pan
+
+Last name not string:
+    >>> say_my_name("Inigo", [Montoya])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+First name not string:
+    >>> say_my_name([Hugo], "Large")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Missing input:
+    >>> say_my_name("Tim",)
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() missing 1 required positional argument: 'last_name'
