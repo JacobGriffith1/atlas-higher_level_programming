@@ -12,13 +12,13 @@ First/Last is string:
     My name is Peter Pan
 
 Last name not string:
-    >>> say_my_name("Inigo", int('Montoya'))
+    >>> say_my_name("Inigo", 10)
     Traceback (most recent call last):
     ...
     TypeError: last_name must be a string
 
 First name not string:
-    >>> say_my_name(int(Hugo), "Large")
+    >>> say_my_name(10, "Large")
     Traceback (most recent call last):
     ...
     TypeError: first_name must be a string
