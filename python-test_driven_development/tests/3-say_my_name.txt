@@ -25,4 +25,4 @@ First name not string:
 
 Missing input:
     >>> say_my_name("Tim",)
-    My name is Tim
+    My name is Tim 
