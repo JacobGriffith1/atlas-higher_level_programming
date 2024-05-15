@@ -23,8 +23,8 @@ def text_indentation(text):
     t = text[:]
 
     for c in ".?:":
-        list = s.split(c)
         s = ""
+        list = s.split(c)
         for l in list:
             l = l.strip(" ")
             s = i + c if s is "" else s + "\n\n" + l + c
