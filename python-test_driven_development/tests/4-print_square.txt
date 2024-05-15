@@ -14,7 +14,7 @@ Size == int > 0
     ###
 
 Size != int && > 0
-    >>> print_square(two)
+    >>> print_square(float('inf'))
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
