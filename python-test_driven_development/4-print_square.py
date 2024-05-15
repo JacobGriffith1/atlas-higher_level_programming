@@ -15,6 +15,7 @@ def print_square(size):
     
     Raises:
         TypeError: Size is not an int
+        ValueError: size < 0
     """
 
     if not isinstance(size, int):
@@ -24,3 +25,4 @@ def print_square(size):
     
     for i in range(size):
         print("#" * size)
+        
