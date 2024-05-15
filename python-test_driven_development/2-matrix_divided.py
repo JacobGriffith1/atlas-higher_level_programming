@@ -44,8 +44,8 @@ def matrix_divided(matrix, div):
         for num in elem:
             if not type(num) in (int, float):
                 raise TypeError(typeMsg)
-            
+
         length = len(elem)
 
-    new = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
-    return (new)
+    q = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
+    return (q)
