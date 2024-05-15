@@ -29,7 +29,9 @@ def roman_to_int(roman_string):
                     numList = [romNum.get(ch)]
                 else:
                     numList.append(romNum.get(ch))
-    
+
+                last = romNum.get(ch)
+
     num += subtract(numList)
 
     return (num)
