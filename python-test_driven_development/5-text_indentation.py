@@ -23,7 +23,7 @@ def text_indentation(text):
     t = text[:]
 
     for c in ".?:":
-        list = s.split(c)
+        list = t.split(c)
         t = ""
         for l in list:
             l = l.strip(" ")
