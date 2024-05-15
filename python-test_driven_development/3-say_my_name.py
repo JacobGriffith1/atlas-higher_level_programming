@@ -6,7 +6,7 @@ This module contains a functon that prints a first/last name message
 
 def say_my_name(first_name, last_name=""):
     """Prints "My name is <first name> <last name>"
-    
+
     Args:
         first_name: First name
         last_name: Last name
