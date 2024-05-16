@@ -69,15 +69,15 @@ class Rectangle:
             return 0
 
         return (self.width * 2) + (self.height * 2)
-    
+
     def __str__(self):
         """method returns a rectangle of #"""
         rectangle = ""
 
         if self.width == 0 or self.height == 0:
             return rectangle
-        
+
         for i in range(self.height):
             rectangle += ("#" * self.width) + "\n"
-        
+
         return rectangle[:-1]
