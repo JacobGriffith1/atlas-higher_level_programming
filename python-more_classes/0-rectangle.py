@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module contains an empty class named Rectangle"""
 class Rectangle:
-    """empty class"""
+    """Empty class Rectangle"""
     pass
