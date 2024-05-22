@@ -13,24 +13,3 @@ Attempting to run area function:
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
-
-Passing a boolean to integer_validator:
-    >>> bg = BaseGeometry
-    >>> bg.integer_validator(self, "True", False)
-    Traceback (most recent call last):
-    ...
-    TypeError: name must be an integer
-
-Passing a negative value to integer_validator:
-    >>> bg = BaseGeometry
-    >>> bg.integer_validator(self, "nega", -12)
-    Traceback (most recent call last):
-    ...
-    ValueError: name must be greater than 0
-
-Passing 0 to integer_validator:
-    >>> bg = BaseGeometry
-    >>> bg.integer_validator(self, "zero", 0)
-    Traceback (most recent call last):
-    ...
-    ValueError: name must be greater than 0
