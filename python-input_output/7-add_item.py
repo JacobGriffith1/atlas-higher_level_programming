@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-'''
-Module contains script to add all args to a
-Python list, then save them to a file
-'''
+'''Module contains script to add all args to a Python list,
+then save them to a file'''
 import sys
 import os.path
 
