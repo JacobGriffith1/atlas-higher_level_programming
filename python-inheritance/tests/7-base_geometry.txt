@@ -38,3 +38,38 @@ Value is a string:
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
+
+Value is tuple:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", (4,))
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+Value is array:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", [3])
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+Value is boolean:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+Value is dict:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", {3, 4})
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+Value is None:
+    >>> bg = BaseGeometry
+    >>> bg.integer_validator("name", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
