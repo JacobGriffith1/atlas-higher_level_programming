@@ -37,4 +37,4 @@ Value is a string:
     >>> bg.integer_validator("name", "4")
     Traceback (most recent call last):
     ...
-    TypeError: name must be integer
+    TypeError: name must be an integer
