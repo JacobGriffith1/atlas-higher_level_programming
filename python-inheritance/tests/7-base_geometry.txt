@@ -27,3 +27,14 @@ No arguments passed:
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Normal name and value passed:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 1)
+
+Value is a string:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", "4")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be integer
