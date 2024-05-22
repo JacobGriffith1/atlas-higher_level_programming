@@ -15,25 +15,29 @@ Attempting to run area function:
     Exception: area() is not implemented
 
 Passing a non-integer to integer_validator:
-    >>> BaseGeometry(integer_validator("slime", "time"))
+    >>> bg = BaseGeometry
+    >>> bg.integer_validator("slime", "time")
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
 
 Passing a boolean to integer_validator:
-    >>> BaseGeometry(integer_validator("True", False))
+    >>> bg = BaseGeometry
+    >>> bg.integer_validator("True", False)
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
 
 Passing a negative value to integer_validator:
-    >>> BaseGeometry(integer_validator("nega", -12))
+    >>> bg = BaseGeometry
+    >>> bg.integer_validator("nega", -12)
     Traceback (most recent call last):
     ...
     ValueError: name must be greater than 0
 
 Passing 0 to integer_validator:
-    >>> BaseGeometry(integer_validator("zero", 0))
+    >>> bg = BaseGeometry
+    >>> bg.integer_validator("zero", 0)
     Traceback (most recent call last):
     ...
     ValueError: name must be greater than 0
