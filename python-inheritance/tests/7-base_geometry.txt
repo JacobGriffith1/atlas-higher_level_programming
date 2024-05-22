@@ -13,3 +13,10 @@ Attempting to run area function:
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
+
+Passing a value of zero:
+    >>> bg = BaseGeometry
+    >>> bg.integer_validator("name", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: name must be greater than zero
