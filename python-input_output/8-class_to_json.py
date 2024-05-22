@@ -5,7 +5,7 @@
 def class_to_json(obj):
     """
     Returns the dictionary description with simple data structure
-    (list, dixtionary, string, integer and boolean) for JSON
+    (list, dictionary, string, integer and boolean) for JSON
     serialization of an object
     """
 
