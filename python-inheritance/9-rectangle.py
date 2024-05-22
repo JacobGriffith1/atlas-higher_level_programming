@@ -17,6 +17,6 @@ class Rectangle(BaseGeometry):
         """Returns area of instance"""
         return self.__width * self.__height
 
-    def p_str(self):
+    def __str__(self):
         """Returns the printable string"""
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
