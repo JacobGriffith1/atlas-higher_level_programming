@@ -16,21 +16,21 @@ Attempting to run area function:
 
 Passing a boolean to integer_validator:
     >>> bg = BaseGeometry
-    >>> bg.integer_validator("True", False)
+    >>> bg.integer_validator(self, "True", False)
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
 
 Passing a negative value to integer_validator:
     >>> bg = BaseGeometry
-    >>> bg.integer_validator("nega", -12)
+    >>> bg.integer_validator(self, "nega", -12)
     Traceback (most recent call last):
     ...
     ValueError: name must be greater than 0
 
 Passing 0 to integer_validator:
     >>> bg = BaseGeometry
-    >>> bg.integer_validator("zero", 0)
+    >>> bg.integer_validator(self, "zero", 0)
     Traceback (most recent call last):
     ...
     ValueError: name must be greater than 0
