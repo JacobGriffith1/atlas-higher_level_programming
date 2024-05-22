@@ -13,4 +13,5 @@ class Square(Rectangle):
 
     def area(self):
         """Returns area"""
-        return super().area()# super() returns a proxy object representing the parent's class
+        return super().area()
+        # super() returns a proxy object representing the parent's class
