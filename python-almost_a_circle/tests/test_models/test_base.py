@@ -16,7 +16,7 @@ class TestBase(unittest.TestCase):
         """Invoked for each test"""
         Base._Base__nb_objects = 0
 
-    def auto_id(self):
+    def test_auto_id(self):
         """Test auto id"""
         new = Base()
         self.assertEqual(new.id, 1)
