@@ -19,3 +19,15 @@ class TestBase(unittest.TestCase):
         base1 = Base()
         base2 = Base()
         self.assertEqual(base1.id, base2.id - 1)
+
+    def test_single_id(self):
+        self.assertEqual(5, Base(5).id)
+
+    def test_public_id(self):
+        public = Base(5)
+        public.id = 10
+        self.assertEqual(10, public.id)
+
+    def test_private_ins(self):
+        with self.assertRaises(AttributeError):
+            print(Base(5).__nb_instances)
