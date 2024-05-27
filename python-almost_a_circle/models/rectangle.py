@@ -76,6 +76,9 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a rectangle in stdout using '#' character"""
+        disRectangle = ""
+
+
         for i in range(self.height):
             disRectangle += ("#" * self.width) + "\n"
 
