@@ -56,3 +56,22 @@ class Base:
             new = cls(10)
         new.update(**dictionary)
         return new
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        filename = "{}.json".format(cls.__name__)
+
+        if os.path.exists(filename) is False:
+            return []
+
+        with open(filename, 'r') as f:
+            list_string = f.read()
+
+        list_class = cls.from_json_string
+        list_instance = []
+
+        for i in range(len(list_class)):
+            list_instance.append(cls.create(**list_class[i]))
+
+        return list_instance
