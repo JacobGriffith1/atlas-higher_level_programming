@@ -31,3 +31,18 @@ class TestBase(unittest.TestCase):
     def test_private_ins(self):
         with self.assertRaises(AttributeError):
             print(Base(5).__nb_instances)
+
+    def test_str(self):
+        self.assertEqual("string", Base("string").id)
+
+    def test_float(self):
+        self.assertEqual(3.14, Base(3.14).id)
+
+    def test_list(self):
+        self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
+
+    def test_dict(self):
+        self.assertEqual({"funnynum1": 69, "funnynum2": 420}, Base({"funnynum1": 69, "funnynum2": 420}).id)
+
+    def test_tuple(self):
+        self.assertEqual((1, 2, 3), Base((1, 2, 3)).id)
