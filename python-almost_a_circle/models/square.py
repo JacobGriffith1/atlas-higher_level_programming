@@ -17,7 +17,7 @@ class Square(Rectangle):
         str_xy = "{}/{} - ".format(self.x, self.y)
         str_wh = "{}/{}".format(self.width, self.height)
 
-        return "OK"
+        return str_Square + str_id + str_xy + str_wh
 
     @property
     def width(self):
