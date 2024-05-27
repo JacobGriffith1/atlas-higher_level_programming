@@ -63,3 +63,20 @@ class TestToJson(unittest.TestCase):
     def test_to_json_TypeError2(self):
         with self.assertRaises(TypeError):
             Base.to_json_string([], 21)
+
+class TestFromJson(unittest.TestCase):
+    """Testing suite for methon: from_json_string"""
+
+    def test_from_json_none(self):
+        self.assertEqual([], Base.from_json_string(None))
+
+    def test_from_json_empty(self):
+        self.assertEqual([], Base.from_json_string("[]"))
+
+    def test_from_json_TypeError(self):
+        with self.assertRaises(TypeError):
+            Base.from_json_string()
+
+    def test_from_json_TypeError2(self):
+        with self.assertRaises(TypeError):
+            Base.from_json_string([], 789)
