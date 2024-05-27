@@ -82,3 +82,12 @@ class Rectangle(Base):
             disRectangle += ("#" * self.width) + "\n"
 
         print(disRectangle, end='')
+
+    def __str__(self):
+        """Override of __str__ builtin"""
+        str_Rectangle = "[Rectangle] "
+        str_id =  "({}) ".format(self.id)
+        str_xy = "{}/{} -".format(self.x, self.y)
+        str_wh = "{}/{}".format(self.width, self.height)
+
+        return str_Rectangle + str_id + str_xy + str_wh
