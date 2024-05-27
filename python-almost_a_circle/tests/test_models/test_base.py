@@ -46,3 +46,20 @@ class TestBase(unittest.TestCase):
 
     def test_tuple(self):
         self.assertEqual((1, 2, 3), Base((1, 2, 3)).id)
+
+class TestToJson(unittest.TestCase):
+    """Testing suite for method: to_json_string"""
+
+    def test_to_json_none(self):
+        self.assertEqual('[]', Base.to_json_string(None))
+
+    def test_to_json_empty(self):
+        self.assertEqual('[]', Base.to_json_string([]))
+
+    def test_to_json_TypeError(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string()
+
+    def test_to_json_TypeError2(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string([], 21)
