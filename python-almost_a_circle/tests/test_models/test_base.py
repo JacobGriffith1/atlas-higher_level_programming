@@ -9,3 +9,13 @@ import os
 
 class TestBase(unittest.TestCase):
     """Testing suite for class: Base"""
+
+    def test_None(self):
+        base1 = Base(None)
+        base2 = Base(None)
+        self.assertEqual(base1.id, base2.id - 1)
+
+    def test_Empty(self):
+        base1 = Base()
+        base2 = Base()
+        self.assertEqual(base1.id, base2.id - 1)
