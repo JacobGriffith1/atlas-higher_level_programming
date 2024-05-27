@@ -11,3 +11,12 @@ from unittest.mock import patch
 
 class TestBase(unittest.TestCase):
     """Testing suite for class: Base"""
+
+    def setUp(self):
+        """Invoked for each test"""
+        Base._Base__nb_objects = 0
+
+    def test_id(self):
+        """Test assigned id"""
+        b1 = Base(1)
+        self.assertEqual(b1.id, 1)
