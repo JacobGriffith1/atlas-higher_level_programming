@@ -27,3 +27,16 @@ class TestRectangle(unittest.TestCase):
         rec = Rectangle(2, 4, 6, 8, 10)
         rec.width = 2
         self.assertEqual(2, rec.width)
+
+    def test_height_priv(self):
+        with self.assertRaises(AttributeError):
+            print(Rectangle(2, 4, 6, 8, 10).__height)
+
+    def test_height_getter(self):
+        rec = Rectangle(2, 4, 6, 8, 10)
+        self.assertEqual(4, rec.height)
+
+    def test_height_setter(self):
+        rec = Rectangle(2, 4, 6, 8, 10)
+        rec.height = 4
+        self.assertEqual(4, rec.height)
