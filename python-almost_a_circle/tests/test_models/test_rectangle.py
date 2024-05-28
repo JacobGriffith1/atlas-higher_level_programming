@@ -91,10 +91,6 @@ class TestRectangle(unittest.TestCase):
         rec2 = Rectangle(12, 14, 16, 18, 20)
         self.assertNotEqual(rec.id, rec2.id)
 
-    def test_five_args2(self):
-        with self.assertIs(Rectangle):
-            Rectangle(2, 4, 6, 8, 10)
-
     def test_six_args(self):
         with self.assertRaises(TypeError):
             Rectangle(2, 4, 6, 8, 10, 12)
