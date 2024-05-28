@@ -186,6 +186,18 @@ class TestRectangle(unittest.TestCase):
             r1.display()
             self.assertEqual(str_out.getvalue(), res)
 
+    def test_display_2(self):
+        r1 = Rectangle(2, 2)
+        res = "##\n##\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            r1.display()
+            self.assertEqual(str_out.getvalue(), res)
+
+        r1.width = 5
+        res = "#####\n#####\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            r1.display()
+            self.assertEqual(str_out.getvalue(), res)
 
 if __name__ == '__main__':
     unittest.main()
