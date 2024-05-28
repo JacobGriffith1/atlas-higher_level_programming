@@ -92,9 +92,8 @@ class TestRectangle(unittest.TestCase):
         self.assertNotEqual(rec.id, rec2.id)
 
     def test_six_args(self):
-        rec = Rectangle(2, 4, 6, 8, 10, 12)
-        rec2 = Rectangle(14, 16, 18, 20, 22)
-        self.assertNotEqual(rec.id, rec2.id)
+        with self.assertRaises(TypeError):
+            Rectangle(2, 4, 6, 8, 10, 12)
 
     def test_w_none(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
