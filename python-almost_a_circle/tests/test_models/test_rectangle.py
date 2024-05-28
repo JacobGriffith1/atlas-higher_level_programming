@@ -199,9 +199,28 @@ class TestRectangle(unittest.TestCase):
             rec.display()
             self.assertEqual(str_out.getvalue(), dis)
 
-    def test_display_full(self):
-        rec = Rectangle(2, 5, 0, 0, 1)
-        dis = "##\n##\n##\n##\n##\n"
+    def test_display_3(self):
+        rec = Rectangle(5, 4, 1, 1)
+        dis = "\n #####\n #####\n #####\n #####\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            rec.display()
+            self.assertEqual(str_out.getvalue(), dis)
+
+    def test_display_4(self):
+        rec = Rectangle(3, 2)
+        dis = "###\n###\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            rec.display()
+            self.assertEqual(str_out.getvalue(), dis)
+
+        rec.x = 4
+        dis = "    ###\n    ###\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            rec.display()
+            self.assertEqual(str_out.getvalue(), dis)
+
+        rec.y = 2
+        dis = "\n\n    ###\n    ###\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
             rec.display()
             self.assertEqual(str_out.getvalue(), dis)
