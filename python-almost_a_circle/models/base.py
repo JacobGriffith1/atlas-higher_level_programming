@@ -16,6 +16,18 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    def check_int(value, val_name, min=None):
+        """Check if an int value is valid, raise error if not"""
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(val_name))
+        if min is None:
+            if value <= 0:
+                raise ValueError("{} must be > 0".format(val_name))
+        else:
+            if value < min:
+                raise ValueError("{} must be >= {}".format(val_name, min))
+        return value
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns JSON string representation of list_dictionaries"""
