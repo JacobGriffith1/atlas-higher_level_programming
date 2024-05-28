@@ -93,7 +93,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_five_args2(self):
         rec = Rectangle(2, 4, 6, 8, 10)
-        self.assertEqual(rec.id, "2, 4, 6, 8, 10")
+        self.assertEqual(rec.id, (2, 4, 6, 8, 10))
 
     def test_six_args(self):
         with self.assertRaises(TypeError):
