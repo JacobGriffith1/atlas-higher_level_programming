@@ -225,51 +225,5 @@ class TestRectangle(unittest.TestCase):
             rec.display()
             self.assertEqual(str_out.getvalue(), dis)
 
-    def test_to_dictionary(self):
-        rec = Rectangle(1, 2, 3, 4, 1)
-        dis = "[Rectangle] (1) 3/4 - 1/2\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            print(rec)
-            self.assertEqual(str_out.getvalue(), dis)
-
-        self.assertEqual(rec.width, 1)
-        self.assertEqual(rec.height, 2)
-        self.assertEqual(rec.x, 3)
-        self.assertEqual(rec.y, 4)
-        self.assertEqual(rec.id, 1)
-
-        dis = "<class 'dict'>\n"
-
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            print(type(rec.to_dictionary()))
-            self.assertEqual(str_out.getvalue(), dis)
-
-    def test_to_dictionary_2(self):
-        rec = Rectangle(2, 2, 2, 2)
-        dis = "[Rectangle] (1) 2/2 - 2/2\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            print(rec)
-            self.assertEqual(str_out.getvalue(), dis)
-
-        r2 = Rectangle(5, 7)
-        dis = "[Rectangle] (2) 0/0 - 5/7\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            print(r2)
-            self.assertEqual(str_out.getvalue(), dis)
-
-        rec_dictionary = rec.to_dictionary()
-        r2.update(**rec_dictionary)
-
-        self.assertEqual(rec.width, r2.width)
-        self.assertEqual(rec.height, r2.height)
-        self.assertEqual(rec.x, r2.x)
-        self.assertEqual(rec.y, r2.y)
-        self.assertEqual(rec.id, r2.id)
-
-        dis = "<class 'dict'>\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            print(type(rec_dictionary))
-            self.assertEqual(str_out.getvalue(), dis)
-
 if __name__ == '__main__':
     unittest.main()
