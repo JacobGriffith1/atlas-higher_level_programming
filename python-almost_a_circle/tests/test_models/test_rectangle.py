@@ -135,5 +135,29 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Rectangle(2, 4, 6, "str", 10)
 
+    def test_w_nan(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(float('nan'), 10)
+
+    def test_w_inf(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(float('inf'), 10)
+
+    def test_w_set(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle({2, 4, 6}, 8)
+
+    def test_w_frozen(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(frozenset({2, 4, 6, 8}), 10)
+
+    def test_w_negative(self):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Rectangle(-2, 4)
+
+    def test_w_zero(self):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Rectangle(0, 4)
+
 if __name__ == '__main__':
     unittest.main()
