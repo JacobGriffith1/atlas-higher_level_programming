@@ -40,3 +40,40 @@ class TestRectangle(unittest.TestCase):
         rec = Rectangle(2, 4, 6, 8, 10)
         rec.height = 4
         self.assertEqual(4, rec.height)
+
+    def test_one_arg(self):
+        with self.assertRaises(TypeError):
+            Rectangle(2)
+
+    def test_two_args(self):
+        rec = Rectangle(2, 4)
+        rec2 = Rectangle(6, 8)
+        self.assertNotEqual(rec.id, rec2.id)
+
+    def test_w_none(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(None, 2)
+
+    def test_w_str(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle("string", 2)
+
+    def test_w_float(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(3.14, 2)
+
+    def test_w_dict(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle({"str": 18, "int": 8}, 2)
+
+    def test_w_list(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle([2, 4, 6], 8)
+
+    def test_w_tuple(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle((2, 4, 6), 8)
+
+
+if __name__ == '__main__':
+    unittest.main()
