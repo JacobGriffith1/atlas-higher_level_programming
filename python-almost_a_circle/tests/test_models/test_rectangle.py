@@ -180,24 +180,31 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rec.area(), 15)
 
     def test_display(self):
-        r1 = Rectangle(2, 5)
-        res = "##\n##\n##\n##\n##\n"
+        rec = Rectangle(2, 5)
+        dis = "##\n##\n##\n##\n##\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
-            r1.display()
-            self.assertEqual(str_out.getvalue(), res)
+            rec.display()
+            self.assertEqual(str_out.getvalue(), dis)
 
     def test_display_2(self):
-        r1 = Rectangle(2, 2)
-        res = "##\n##\n"
+        rec = Rectangle(2, 2)
+        dis = "##\n##\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
-            r1.display()
-            self.assertEqual(str_out.getvalue(), res)
+            rec.display()
+            self.assertEqual(str_out.getvalue(), dis)
 
-        r1.width = 5
-        res = "#####\n#####\n"
+        rec.width = 5
+        dis = "#####\n#####\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
-            r1.display()
-            self.assertEqual(str_out.getvalue(), res)
+            rec.display()
+            self.assertEqual(str_out.getvalue(), dis)
+
+    def test_display_full(self):
+        rec = Rectangle(2, 5, 0, 0, 1)
+        dis = "##\n##\n##\n##\n##\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            rec.display()
+            self.assertEqual(str_out.getvalue(), dis)
 
 if __name__ == '__main__':
     unittest.main()
