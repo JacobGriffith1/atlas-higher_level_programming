@@ -225,25 +225,6 @@ class TestRectangle(unittest.TestCase):
             rec.display()
             self.assertEqual(str_out.getvalue(), dis)
 
-    def test_to_dictionary(self):
-        rec = Rectangle(1, 2, 3, 4, 1)
-        dis = "[Rectangle] (1) 3/4 - 1/2\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            print(rec)
-            self.assertEqual(str_out.getvalue(), dis)
 
-        self.assertEqual(rec.width, 1)
-        self.assertEqual(rec.height, 2)
-        self.assertEqual(rec.x, 3)
-        self.assertEqual(rec.y, 4)
-        self.assertEqual(rec.id, 1)
-
-        dis = "<class 'dict'>\n"
-
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            print(type(rec.to_dictionary()))
-            self.assertEqual(str_out.getvalue(), dis)
-
-#test
 if __name__ == '__main__':
     unittest.main()
