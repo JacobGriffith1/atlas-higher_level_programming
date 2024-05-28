@@ -244,6 +244,6 @@ class TestRectangle(unittest.TestCase):
             print(type(rec.to_dictionary()))
             self.assertEqual(str_out.getvalue(), dis)
 
-
+#test
 if __name__ == '__main__':
     unittest.main()
