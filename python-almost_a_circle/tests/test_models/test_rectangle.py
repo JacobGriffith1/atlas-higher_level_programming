@@ -76,6 +76,26 @@ class TestRectangle(unittest.TestCase):
         rec2 = Rectangle(6, 8)
         self.assertNotEqual(rec.id, rec2.id)
 
+    def test_three_args(self):
+        rec = Rectangle(2, 4, 6)
+        rec2 = Rectangle(8, 10, 12)
+        self.assertNotEqual(rec.id, rec2.id)
+
+    def test_four_args(self):
+        rec = Rectangle(2, 4, 6, 8)
+        rec2 = Rectangle(10, 12, 14, 16)
+        self.assertNotEqual(rec.id, rec2.id)
+
+    def test_five_args(self):
+        rec = Rectangle(2, 4, 6, 8, 10)
+        rec2 = Rectangle(12, 14, 16, 18, 20)
+        self.assertNotEqual(rec.id, rec2.id)
+
+    def test_six_args(self):
+        rec = Rectangle(2, 4, 6, 8, 10, 12)
+        rec2 = Rectangle(14, 16, 18, 20, 22)
+        self.assertNotEqual(rec.id, rec2.id)
+
     def test_w_none(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle(None, 2)
@@ -108,6 +128,13 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle((2, 4, 6), 8)
 
+    def test_x_str(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Rectangle(2, 4, "str", 8, 10)
+
+    def test_y_str(self):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Rectangle(2, 4, 6, "str", 10)
 
 if __name__ == '__main__':
     unittest.main()
