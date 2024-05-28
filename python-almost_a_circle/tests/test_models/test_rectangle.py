@@ -163,5 +163,13 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(2, 0)
 
+    def test_rec(self):
+        rec = Rectangle(1, 1)
+        self.assertEqual(rec.width, 1)
+        self.assertEqual(rec.height, 1)
+        self.assertEqual(rec.x, 0)
+        self.assertEqual(rec.y, 0)
+        self.assertEqual(rec.id, 1)
+
 if __name__ == '__main__':
     unittest.main()
