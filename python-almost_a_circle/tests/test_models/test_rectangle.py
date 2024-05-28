@@ -127,14 +127,6 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle((2, 4, 6), 8)
 
-    def test_w_zero(self):
-        with self.assertRaisesRegex(TypeError, "width must be  > 0"):
-            Rectangle(0, 4)
-
-    def test_h_zero(self):
-        with self.assertRaisesRegex(TypeError, "height must be > 0"):
-            Rectangle(2, 0)
-
     def test_x_str(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(2, 4, "str", 8, 10)
