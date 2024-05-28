@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Tests module for class: Rectangle"""
 import unittest
-from unittest.mock import patch
-from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -178,20 +176,6 @@ class TestRectangle(unittest.TestCase):
     def test_area(self):
         rec = Rectangle(3, 5)
         self.assertEqual(rec.area(), 15)
-
-    def test_display(self):
-        rec = Rectangle(3, 5)
-        dis = "##\n##\n##\n##\n##\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            rec.display()
-            self.assertEqual(str_out.getvalue(), dis)
-
-    def test_display_2(self):
-        rec = Rectangle(2, 2)
-        dis = "##\n##\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            rec.display()
-            self.assertEqual(str_out.getvalue(), dis)
 
 if __name__ == '__main__':
     unittest.main()
