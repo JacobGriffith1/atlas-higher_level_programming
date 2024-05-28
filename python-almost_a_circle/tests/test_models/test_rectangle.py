@@ -171,7 +171,11 @@ class TestRectangle(unittest.TestCase):
 
     def test_strings(self):
         self.obj = Rectangle(2,4,6,8,10)
-        self.assertEqual(str(self.obj), "[Rectangle] (10) 6/8 - 2/4")    
+        self.assertEqual(str(self.obj), "[Rectangle] (10) 6/8 - 2/4")
+
+    def test_area(self):
+        rec = Rectangle(3, 5)
+        self.assertEqual(rec.area(), 15)
 
 if __name__ == '__main__':
     unittest.main()
