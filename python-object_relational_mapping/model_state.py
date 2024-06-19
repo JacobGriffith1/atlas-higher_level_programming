@@ -10,10 +10,9 @@ Base = declarative_base
 
 
 class State(Base):
-    """
-    Class contains [id] and [name] attributes of each [State]
-    """
+    """Class contains [id] and [name] attributes of each [State]"""
     __tablename__ = 'states'
+
     id = Column(Integer,
                 unique=True,
                 nullable=False,
