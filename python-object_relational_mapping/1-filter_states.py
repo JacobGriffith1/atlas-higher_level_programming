@@ -17,7 +17,7 @@ if __name__ == '__main__':
     csr.execute("SELECT * \
                  FROM `states` \
                  WHERE `name` \
-                 LIKE 'N%' \
+                 LIKE BINARY 'N%' \
                  ORDER BY `id`")
     states = csr.fetchall()
 
