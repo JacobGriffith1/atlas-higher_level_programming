@@ -17,7 +17,7 @@ if __name__ == '__main__':
     csr = db.cursor()
     csr.execute("SELECT * \
                  FROM states \
-                 WHERE name = %s;"
+                 WHERE name = %s;",
                  (sys.argv[4],))
     states = csr.fetchall()
 
