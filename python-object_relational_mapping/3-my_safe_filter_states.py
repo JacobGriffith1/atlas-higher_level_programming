@@ -18,7 +18,7 @@ if __name__ == '__main__':
     csr.execute("SELECT * \
                  FROM states \
                  WHERE name = %s;",
-                 (sys.argv[4],))
+                (sys.argv[4],))
     states = csr.fetchall()
 
     for state in states:
