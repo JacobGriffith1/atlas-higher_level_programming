@@ -17,7 +17,7 @@ if __name__ == '__main__':
     sessmake = sessionmaker(bind=engine)
     session = sessmake()
 
-    StateCity = session.query(State, City).filter(State.id == City.state_id).all()
+    StaCit = session.query(State, City).filter(State.id == City.state_id).all()
 
-    for state, city in StateCity:
+    for state, city in StaCit:
         print("{}: ({}) {}".format(state.name, city.id, city.name))

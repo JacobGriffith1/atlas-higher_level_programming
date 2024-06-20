@@ -8,7 +8,9 @@ from sqlalchemy.ext.declarative import declarative_base
 
 
 class City(Base):
-    """Class contains [id], [name], and [state_id] attributes of each [City]"""
+    """
+    Class contains [id], [name], and [state_id] attributes of each [City]
+    """
     __tablename__ = 'cities'
 
     id = Column(Integer,
