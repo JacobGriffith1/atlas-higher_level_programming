@@ -1,4 +1,5 @@
 #!/usr/bin/node
+// File System module include
 const fs = require('fs');
 // Method readFile() is used to read files
 // Options for readFile() include
