@@ -7,9 +7,9 @@ request(url, (err, res, body) => {
   if (err) throw err;
   const text = JSON.parse(body);
   let i = 0;
-  for (const films of text.results) {
-    for (const people of films.people) {
-      if (people.includes(id)) {
+  for (const film of text.results) {
+    for (const character of films.characters) {
+      if (character.includes(id)) {
         i++;
       }
     }
