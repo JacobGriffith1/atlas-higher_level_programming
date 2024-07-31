@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sage Wisdom</title>
-    <script src="https://uselessfacts.jsph.pl/"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <title>Vinti's</title>
   </head>
   <body>
-    <header></header>
-    <footer></footer>
+    Item: <input type="text" id="myText" value="">
+
+    <button onclick="myFunction()">Search</button>
+
+    <p id="searchResult">Results:</p>
+    <p id="data"></p>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myText").value;
+      document.getElementById("data").innerHTML = x;
+    }
+    </script>
+
   </body>
 </html>
